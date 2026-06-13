@@ -59,6 +59,12 @@ body {
   transition: background 0.4s ease, color 0.4s ease;
 }
 
+main,
+section,
+footer {
+  overflow-x: clip;
+}
+
 body::before {
   content: '';
   position: fixed;
@@ -389,6 +395,7 @@ section {
   line-height: 1;
   color: var(--text-primary);
   opacity: 0;
+  overflow-wrap: anywhere;
 }
 
 .hero-name em {
@@ -748,6 +755,7 @@ section {
   font-size: 1.35rem;
   line-height: 1.2;
   color: var(--text-primary);
+  overflow-wrap: anywhere;
 }
 
 .proj-desc {
@@ -913,6 +921,7 @@ section {
   line-height: 1.3;
   color: var(--text-primary);
   transition: color 0.2s;
+  overflow-wrap: anywhere;
 }
 
 .write-desc {
@@ -1210,6 +1219,7 @@ section {
   letter-spacing: 0.08em;
   color: var(--text-secondary);
   transition: color 0.2s;
+  overflow-wrap: anywhere;
 }
 
 .footer-link:hover {
@@ -1303,6 +1313,265 @@ section {
 
   .about-layout {
     gap: 2.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 15px;
+  }
+
+  .nav {
+    padding: 0.95rem 1rem;
+  }
+
+  .nav-right {
+    gap: 1rem;
+  }
+
+  .theme-btn {
+    width: 2rem;
+  }
+
+  .mobile-menu {
+    gap: 2rem;
+  }
+
+  .mobile-menu a {
+    font-size: 2rem;
+  }
+
+  .mobile-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 7rem 0 4.5rem;
+    align-items: flex-start;
+  }
+
+  .hero-name {
+    font-size: clamp(3.1rem, 18vw, 4.75rem);
+    line-height: 0.96;
+    margin-bottom: 1rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.65rem;
+  }
+
+  .hero-current {
+    max-width: 100%;
+    font-size: 0.68rem;
+    line-height: 1.65;
+    letter-spacing: 0.07em;
+  }
+
+  .hero-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.45rem;
+    max-width: 18rem;
+    line-height: 1.7;
+  }
+
+  .hero-chips span {
+    margin: 0;
+  }
+
+  .hero-sub {
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .intro,
+  .work,
+  .writing,
+  .ideas,
+  .interests,
+  .about {
+    padding: 4.5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.75rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 11vw, 2.8rem);
+  }
+
+  .intro-line,
+  .ideas-text p,
+  .about-para {
+    font-size: 1.35rem;
+  }
+
+  .intro-line.dim,
+  .ideas-text p.dim {
+    font-size: 1.1rem;
+  }
+
+  .focus-card {
+    gap: 1.25rem;
+    margin: -0.5rem 0 2rem;
+    padding: 1.15rem;
+  }
+
+  .focus-title {
+    font-size: 1.1rem;
+  }
+
+  .focus-tags {
+    gap: 0.4rem;
+  }
+
+  .focus-tag {
+    font-size: 0.58rem;
+  }
+
+  .proj-card {
+    min-height: 16rem;
+    padding: 1.55rem 1.25rem;
+  }
+
+  .proj-title {
+    font-size: 1.45rem;
+  }
+
+  .proj-desc {
+    font-size: 0.76rem;
+  }
+
+  .github-activity {
+    gap: 0.85rem;
+    margin-top: 2rem;
+  }
+
+  .writing-layout,
+  .ideas-layout,
+  .about-layout {
+    margin-top: 2.5rem;
+  }
+
+  .write-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem 1rem;
+    align-items: start;
+    padding: 1.05rem 0;
+  }
+
+  .write-meta {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    min-width: 0;
+  }
+
+  .write-body {
+    min-width: 0;
+  }
+
+  .write-title {
+    font-size: 1.15rem;
+  }
+
+  .write-desc {
+    font-size: 0.72rem;
+  }
+
+  .quotes-col {
+    gap: 1.4rem;
+  }
+
+  .quote-block {
+    padding-left: 1rem;
+  }
+
+  .quote-text {
+    font-size: 1.15rem;
+  }
+
+  .ideas-pillar {
+    padding: 0.9rem 0;
+  }
+
+  .interests-chips,
+  .about-skills {
+    gap: 0.5rem;
+  }
+
+  .interest-chip {
+    padding: 0.48rem 0.8rem;
+    font-size: 0.68rem;
+  }
+
+  .stat-number {
+    font-size: 3.2rem;
+  }
+
+  .timeline-item {
+    grid-template-columns: 3.25rem 1fr;
+    gap: 0.9rem;
+  }
+
+  .footer {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .footer-logo {
+    font-size: 3rem;
+  }
+
+  .footer-link {
+    max-width: 100%;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 380px) {
+  .container,
+  .w3-container,
+  .intro-inner,
+  .work-inner,
+  .writing-inner,
+  .ideas-inner,
+  .interests-inner,
+  .about-inner,
+  .footer-inner,
+  .footer-bottom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-name {
+    font-size: clamp(2.75rem, 17vw, 4rem);
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .proj-card {
+    min-height: 15rem;
+    padding: 1.35rem 1rem;
   }
 }
 
